@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="havis.device.rf-common" default="publish" xmlns:ivy="antlib:org.apache.ivy.ant">
+
+	<property file="${basedir}/build.properties" />
+
+	<import>
+		<url url="${ivy.url}/ant/default.xml" />
+	</import>
+
+	<target name="clean-cache" description="Cleans the ivy cache">
+		<clean-cache />
+	</target>
+
+	<target name="clean-all" description="Cleans the project and ivy cache">
+		<clean-all />
+	</target>
+
+	<target name="compile">
+		<compile dst="${build.dir.classes}">
+			<src path="${src.main.dir}" />
+		</compile>
+	</target>
+
+	<target name="compile-gwt" depends="compile">
+		<compile-gwt modules="havis.net.ui.rf.RFDeviceStandalone" />
+	</target>
+
+	<target name="jar" depends="compile-gwt" description="Builds a JAR file from the project.">
+		<jar-bin />
+	</target>
+
+	<target name="deb" depends="jar">
+		<deb name="50_${basename}" package="havis.device.rf">
+			<ivy:retrieve pattern="${dst.dir}/bundle/50_[artifact].[ext]" conf="runtime" />
+			<jar jarfile="${dst.dir}/bundle/50_${basename}.fragment.jar" manifest="${resources.dir}/fragment/MANIFEST.MF" />
+		</deb>
+	</target>
+
+	<target name="test" depends="compile" unless="${skip.test}">
+		<test name="havis.device.rf.common.test.TestSuite">
+			<copy todir="${build.dir.test.classes}">
+				<fileset dir="${resources.dir.test.classpath}" includes="**/*" />
+			</copy>
+		</test>
+	</target>
+
+	<target name="publish" depends="deb" description="Publishes the JAR to the repository">
+		<publish jar="false" app="false" />
+	</target>
+
+</project>

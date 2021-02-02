@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rfcConfiguration xmlns="urn:havis.device.rf:xsd:1">
+    <deviceCapabilities>
+        <manufacturer></manufacturer>
+        <model></model>
+        <firmware></firmware>
+        <numberOfAntennas></numberOfAntennas>
+        <maxReceiveSensitivity></maxReceiveSensitivity>
+        <receiveSensitivityTable>
+            <entry index="0">
+                <receiveSensitivity></receiveSensitivity>
+            </entry>
+            ...
+        </receiveSensitivityTable>
+        <antennaReceiveSensitivityRangeTable>
+            <entry index="0">
+                <min></min>
+                <max></max>
+            </entry>
+            ...
+        </antennaReceiveSensitivityRangeTable>
+    </deviceCapabilities>
+    <regulatoryCapabilities>
+        <countryCode></countryCode>
+        <communicationStandard></communicationStandard>
+        <transmitPowerTable>
+            <entry index="0">
+                <transmitPower></transmitPower>
+            </entry>
+            ...
+        </transmitPowerTable>
+        <hopping>true</hopping>
+        <freqHopTable>
+            <entry index="0">
+                <freq></freq>
+                ...
+            </entry>
+            ...            
+        </freqHopTable>
+        <fixedFreqTable>
+			<freq></freq>            
+            ...            
+        </fixedFreqTable>
+    </regulatoryCapabilities>
+    <antennaConfigurationList>
+        <entry>
+            <id></id>
+            <receiveSensitivity></receiveSensitivity>
+            <transmitPower></transmitPower>
+            <hopTableID></hopTableID>
+            <channelIndex></channelIndex>
+        </entry>
+        ...
+    </antennaConfigurationList>
+    <antennaPropertyList>
+        <entry>
+            <id></id>
+            <gain></gain>
+            <connected></connected>
+        </entry>
+        ...        
+    </antennaPropertyList>
+    <keepAliveConfiguration>
+        <enable></enable>
+        <interval></interval>
+    </keepAliveConfiguration>
+</rfcConfiguration>

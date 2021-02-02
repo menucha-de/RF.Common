@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+	<info organisation="havis/device/rf" module="common" default="true" />
+
+	<configurations>
+		<conf name="default" />
+		<conf name="doc" />
+		<conf name="src" />
+		<conf name="deb" />
+	</configurations>
+
+	<publications>
+		<artifact name="havis.device.rf-common" conf="default" />
+		<artifact name="havis.device.rf-common-javadoc" conf="doc" />
+		<artifact name="havis.device.rf-common-sources" conf="src" />
+		<artifact name="havis.device.rf" type="deb" conf="deb" />
+	</publications>
+
+	<dependencies>
+		<dependency org="com/fasterxml/jackson/core" name="jackson-databind" rev="${jackson.version}" conf="default" />
+		<dependency org="havis/device/rf" name="api" rev="${havis.version}" conf="default" />
+	</dependencies>
+
+</ivy-module>

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+URL="http://admin@localhost/rest/apps"
+PKG="50_havis.net.rest.rf.jar 50_@Bundle-SymbolicName@.jar 50_@Bundle-SymbolicName@.fragment.jar 50_havis.device.rf-api.jar"
+
+for pkg in $PKG; do
+  busybox wget $URL/$pkg/unplug -q --spider
+done
+
+exit 0

@@ -1,0 +1,25 @@
+Bundle-Name: Ha-VIS Device RF Common
+Bundle-SymbolicName: havis.device.rf-common
+Bundle-Version: 2.6.2
+Application-Name: RFID Hardware
+Implementation-Version: 2.6
+Bundle-ManifestVersion: 2
+Bundle-Activator: havis.device.rf.common.osgi.Activator
+Bundle-Vendor: HARTING IT_SD
+Import-Package: 
+ com.fasterxml.jackson.core,
+ com.fasterxml.jackson.databind,
+ havis.device.rf,
+ havis.device.rf.capabilities,
+ havis.device.rf.configuration,
+ havis.device.rf.exception,
+ havis.device.rf.nur;resolution:=optional,
+ havis.device.rf.tag,
+ havis.device.rf.tag.operation,
+ havis.device.rf.tag.result,
+ havis.util.monitor,
+ org.osgi;resolution:=optional,
+ org.osgi.framework;resolution:=optional
+Export-Package: 
+ havis.device.rf.common,
+ havis.device.rf.common.util

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rfcRegion xmlns="urn:havis.device.rf:xsd:1">
+    <id></id>
+    <regulatoryCapabilities>
+        <countryCode></countryCode>
+        <communicationStandard></communicationStandard>
+        <transmitPowerTable>
+            <entry index="0">
+                <transmitPower></transmitPower>
+            </entry>
+            ...
+        </transmitPowerTable>
+        <hopping>true</hopping>
+        <freqHopTable>
+            <entry index="0">
+                <freq></freq>
+                <freq></freq>
+                ...
+            </entry>
+            ...            
+        </freqHopTable>
+        <fixedFreqTable>
+            <freq></freq>
+            ...
+        </fixedFreqTable>
+    </regulatoryCapabilities>
+</rfcRegion>
