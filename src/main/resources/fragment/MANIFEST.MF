@@ -1,7 +1,7 @@
 Bundle-Name: Ha-VIS Device RF Common Fragment
 Bundle-SymbolicName: havis.device.rf-common.fragment
-Bundle-Version: 2.6.0
-Implementation-Version: 2.6
+Bundle-Version: 2.7.0
+Implementation-Version: 2.7
 Bundle-ManifestVersion: 2
 Bundle-Vendor: HARTING IT_SD
 Fragment-Host: havis.util.context
