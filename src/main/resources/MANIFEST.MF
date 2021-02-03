@@ -1,8 +1,8 @@
 Bundle-Name: Ha-VIS Device RF Common
 Bundle-SymbolicName: havis.device.rf-common
-Bundle-Version: 2.6.2
+Bundle-Version: 2.7.0
 Application-Name: RFID Hardware
-Implementation-Version: 2.6
+Implementation-Version: 2.7
 Bundle-ManifestVersion: 2
 Bundle-Activator: havis.device.rf.common.osgi.Activator
 Bundle-Vendor: HARTING IT_SD
