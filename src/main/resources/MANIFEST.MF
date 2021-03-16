@@ -5,7 +5,7 @@ Application-Name: RFID Hardware
 Implementation-Version: 2.7
 Bundle-ManifestVersion: 2
 Bundle-Activator: havis.device.rf.common.osgi.Activator
-Bundle-Vendor: HARTING IT_SD
+Bundle-Vendor: Menucha Team <info@menucha.de>
 Import-Package: 
  com.fasterxml.jackson.core,
  com.fasterxml.jackson.databind,

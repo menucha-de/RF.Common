@@ -54,7 +54,7 @@ public class CommunicationHandler implements RFDevice {
 					|| type == havis.util.monitor.CapabilityType.DEVICE_CAPABILITIES)
 				// TODO: add firmware
 				ret.add(new DeviceCapabilities("Built-In",
-						"HARTING Software Development GmbH & Co.KG", "RF-R300", null));
+						"Menucha Team", "RF-R300", null));
 
 			return ret;
 		}
